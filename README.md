@@ -7,9 +7,11 @@ The project focuses on leakage-aware time-series validation, comparison against 
 
 Live Demo
 
-Open the live forecasting dashboard
+https://rossmann-demand-forecastinggit-zmbar9ufv2vd9sqdhw3tmj.streamlit.app/
 
 Explore store-level actual versus predicted sales, compare the model against historical baselines, inspect promotion-related errors, and download selected-store holdout predictions.
+
+
 
 ## Project Highlights
 
