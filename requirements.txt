@@ -3,5 +3,8 @@ pandas==3.0.2
 numpy==1.26.4
 scikit-learn==1.8.0
 
+# Dashboard
+streamlit==1.56.0
+
 # Testing
 pytest==9.1.0
