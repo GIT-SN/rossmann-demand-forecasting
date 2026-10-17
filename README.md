@@ -4,6 +4,13 @@ A retail demand forecasting project that predicts store-level sales over a 42-ca
 
 The project focuses on leakage-aware time-series validation, comparison against historical baselines, transparent holdout evaluation, and an interactive Streamlit dashboard.
 
+
+Live Demo
+
+Open the live forecasting dashboard
+
+Explore store-level actual versus predicted sales, compare the model against historical baselines, inspect promotion-related errors, and download selected-store holdout predictions.
+
 ## Project Highlights
 
 - Forecast horizon: 42 calendar days
