@@ -1,0 +1,60 @@
+{
+  "project": "Retail Demand Forecasting",
+  "selected_model": "HistGradientBoostingRegressor",
+  "forecast_horizon_days": 42,
+  "selection_rule": "Choose the model with the lowest mean WAPE across four rolling validation folds; prefer the simpler baseline unless the improvement is at least 1 percentage point.",
+  "validation": {
+    "fold_wape_pct": [
+      11.359712,
+      8.984187,
+      10.584053,
+      8.826204
+    ],
+    "mean_wape_pct": 9.938539,
+    "min_wape_pct": 8.826204,
+    "max_wape_pct": 11.359712,
+    "best_baseline": "Sales_lag_364",
+    "best_baseline_mean_wape_pct": 14.654713,
+    "improvement_vs_best_baseline_pp": 4.716174
+  },
+  "holdout": {
+    "period_start": "2015-06-20",
+    "period_end": "2015-07-31",
+    "holdout_open_store_days": 40282,
+    "common_comparison_rows": 32603,
+    "model_wape_all_rows_pct": 9.32554244934457,
+    "model_wape_common_rows_pct": 9.117172487915749,
+    "lag_364_wape_common_rows_pct": 11.283134792411005,
+    "lag_42_wape_common_rows_pct": 14.026390869812456,
+    "weekday_mean_wape_common_rows_pct": 16.99463606907795,
+    "improvement_vs_lag_364_pp": 2.165962304495256,
+    "forecast_actual_ratio_all_rows": 1.0155404531411214,
+    "band_90_empirical_coverage_pct": 92.13048011518794,
+    "band_95_empirical_coverage_pct": 96.31845489300433
+  },
+  "uncertainty": {
+    "method": "Store-level bootstrap",
+    "repetitions": 2000,
+    "stores_resampled": 1115,
+    "improvement_point_estimate_pp": 2.165962304495256,
+    "ci_95_lower_pp": 1.931989940173496,
+    "ci_95_upper_pp": 2.4022874350278354,
+    "interpretation": "The store-level bootstrap interval is above zero; the model has lower WAPE than the lag-364 baseline on the evaluated holdout rows."
+  },
+  "prediction_band_multipliers": {
+    "90_percent": {
+      "lower": 0.7992031337386616,
+      "upper": 1.2318586325111425
+    },
+    "95_percent": {
+      "lower": 0.7575806838885407,
+      "upper": 1.3081565014092222
+    }
+  },
+  "caveats": [
+    "The holdout covers only 42 calendar days in 2015.",
+    "Bootstrap uncertainty is across stores conditional on this holdout period.",
+    "Prediction-band coverage is empirical on this holdout, not a guarantee of future coverage.",
+    "Baseline comparisons use only rows where all compared methods have predictions."
+  ]
+}

@@ -1,0 +1,35 @@
+<<'EOF'
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Generated local database
+data/*.db
+
+# Raw dataset files (download separately)
+data/*.csv
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local validation diagnostics
+notebooks/notebook_validation_predictions.csv
+reports/pipeline_validation_predictions.csv
+EOF

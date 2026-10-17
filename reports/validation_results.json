@@ -1,0 +1,88 @@
+{
+  "evaluation_type": "validation_only",
+  "holdout_scored": false,
+  "forecast_horizon_days": 42,
+  "model": "HistGradientBoostingRegressor",
+  "model_parameters": {
+    "learning_rate": 0.08,
+    "max_iter": 200,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "random_state": 42
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "validation_start": "2015-01-03",
+      "validation_end": "2015-02-13",
+      "training_rows": 649493,
+      "validation_open_store_days": 39924,
+      "common_comparison_rows": 30832,
+      "wape_pct": 11.256622340053731,
+      "forecast_actual_ratio": 1.0681464642870175,
+      "baseline_wape_pct": {
+        "pred_lag42": 28.590513018375184,
+        "pred_lag364": 20.37815566915762,
+        "pred_weekday_mean": 17.031045682502608
+      }
+    },
+    {
+      "fold": 2,
+      "validation_start": "2015-02-14",
+      "validation_end": "2015-03-27",
+      "training_rows": 689417,
+      "validation_open_store_days": 40176,
+      "common_comparison_rows": 39703,
+      "wape_pct": 8.9337136496313,
+      "forecast_actual_ratio": 0.9880792269519273,
+      "baseline_wape_pct": {
+        "pred_lag42": 19.822588931864793,
+        "pred_lag364": 10.61022929756489,
+        "pred_weekday_mean": 18.615788870866524
+      }
+    },
+    {
+      "fold": 3,
+      "validation_start": "2015-03-28",
+      "validation_end": "2015-05-08",
+      "training_rows": 729593,
+      "validation_open_store_days": 37044,
+      "common_comparison_rows": 33600,
+      "wape_pct": 10.559005566196019,
+      "forecast_actual_ratio": 0.988846678427253,
+      "baseline_wape_pct": {
+        "pred_lag42": 18.21664108845331,
+        "pred_lag364": 15.330880225006435,
+        "pred_weekday_mean": 19.351478631904264
+      }
+    },
+    {
+      "fold": 4,
+      "validation_start": "2015-05-09",
+      "validation_end": "2015-06-19",
+      "training_rows": 766637,
+      "validation_open_store_days": 37473,
+      "common_comparison_rows": 31279,
+      "wape_pct": 8.93489822300389,
+      "forecast_actual_ratio": 0.9889415197478947,
+      "baseline_wape_pct": {
+        "pred_lag42": 27.61925318353122,
+        "pred_lag364": 12.299585829223322,
+        "pred_weekday_mean": 14.06154943857511
+      }
+    }
+  ],
+  "model_mean_wape_pct": 9.921059944721236,
+  "model_wape_min_pct": 8.9337136496313,
+  "model_wape_max_pct": 11.256622340053731,
+  "baseline_mean_wape_pct": {
+    "pred_lag42": 23.56224905555613,
+    "pred_lag364": 14.654712755238066,
+    "pred_weekday_mean": 17.264965655962126
+  },
+  "best_baseline": "pred_lag364",
+  "best_baseline_mean_wape_pct": 14.654712755238066,
+  "improvement_over_best_baseline_pp": 4.73365281051683,
+  "selection_threshold_pp": 1.0
+}
